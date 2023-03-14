@@ -1,31 +1,28 @@
- <!DOCTYPE>
- <html>
- <head>
-     <meta charset="UTF-8" />
-     <title>Maptalks Quick Start</title>
-     <link rel="stylesheet" href="libs/maptalks/maptalks.css">
-     <script type="text/javascript" src="libs/maptalks/maptalks.js"></script>
- </head>
- <body>
- <div style="width:1800px;height:900px;" id="map"></div>
- <script type="text/javascript">
-   // create map in div 'map'
-    var map = new maptalks.Map('map', {
-      center:             [105.08052356963802, 36.04231948670001],
-      zoom:               5,
-      minZoom:            1,
-      maxZoom:            19,
-      spatialReference:   {
-            projection : 'baidu'
-      },
-      baseLayer: new maptalks.TileLayer('base', {
-        'urlTemplate' : 'http://online{s}.map.bdimg.com/onlinelabel/?qt=tile&x={x}&y={y}&z={z}&styles=pl&scaler=1&p=1',
-        'subdomains'  : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-        'attribution' :  '© <a target="_blank" href="http://map.baidu.com">Baidu</a>'
-      })
-    });
-    new maptalks.Marker([116.4074, 39.9042]).addTo(map);
- </script>
- </body>
- </html>
-         
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Maptalks Quick Start</title>
+    <link rel="stylesheet" href="libs/maptalks/maptalks.css">
+    <script type="text/javascript" src="libs/maptalks/maptalks.js"></script>
+</head>
+<body>
+
+<a href="baidu.map.html">baidu map</a>
+
+<div style="width:800px;height:600px;" id="map"></div>
+<script type="text/javascript">
+  // create map in div 'map'
+  var map = new maptalks.Map('map', {
+    center: [0, 0],
+    zoom: 2,
+    baseLayer: new maptalks.TileLayer('base', {
+      'urlTemplate' : 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+      'subdomains'  : ['a','b','c','d'],
+      'attribution'  : '&copy; <a href="http://www.osm.org/copyright">OSM</a> contributors, '+
+      '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+    })
+  });
+</script>
+</body>
+</html>
